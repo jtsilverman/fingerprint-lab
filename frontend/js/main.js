@@ -4,13 +4,23 @@
 
 import { sha256 } from './hash.js';
 import { hideLoading, showFingerprint, showScore, renderResults } from './ui.js';
+import { collectCanvas } from './collectors/canvas.js';
+import { collectWebGL } from './collectors/webgl.js';
+import { collectAudio } from './collectors/audio.js';
+import { collectNavigator } from './collectors/navigator.js';
+import { collectScreen } from './collectors/screen.js';
+import { collectFonts } from './collectors/fonts.js';
+import { collectTimezone } from './collectors/timezone.js';
 
-// Collectors will be imported as they're built
-const collectors = [];
-
-export function registerCollector(fn) {
-  collectors.push(fn);
-}
+const collectors = [
+  collectCanvas,
+  collectWebGL,
+  collectAudio,
+  collectNavigator,
+  collectScreen,
+  collectFonts,
+  collectTimezone,
+];
 
 async function run() {
   const results = await Promise.all(collectors.map(fn => {
