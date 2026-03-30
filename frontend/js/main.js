@@ -11,6 +11,14 @@ import { collectNavigator } from './collectors/navigator.js';
 import { collectScreen } from './collectors/screen.js';
 import { collectFonts } from './collectors/fonts.js';
 import { collectTimezone } from './collectors/timezone.js';
+import { collectDevtools } from './collectors/devtools.js';
+import { collectWebrtc } from './collectors/webrtc.js';
+import { collectCSS } from './collectors/css.js';
+import { collectSpeech } from './collectors/speech.js';
+import { collectMedia } from './collectors/media.js';
+import { collectPerformance } from './collectors/performance.js';
+import { collectMath } from './collectors/math.js';
+import { collectErrors } from './collectors/errors.js';
 
 const collectors = [
   collectCanvas,
@@ -20,6 +28,14 @@ const collectors = [
   collectScreen,
   collectFonts,
   collectTimezone,
+  collectDevtools,
+  collectWebrtc,
+  collectCSS,
+  collectSpeech,
+  collectMedia,
+  collectPerformance,
+  collectMath,
+  collectErrors,
 ];
 
 async function run() {
