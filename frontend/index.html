@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fingerprint Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Fingerprint Lab</h1>
+    <p class="subtitle">How unique is your browser?</p>
+  </header>
+
+  <main>
+    <section id="score-section">
+      <div id="score-gauge"></div>
+      <div id="fingerprint-hash"></div>
+    </section>
+
+    <section id="results">
+      <div id="loading">Running tests...</div>
+      <div id="vector-grid" class="grid"></div>
+    </section>
+
+    <section id="actions">
+      <button id="export-btn" class="btn" style="display:none">Export as JSON</button>
+      <button id="compare-btn" class="btn btn-secondary" style="display:none">Compare with others</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>All tests run locally in your browser. No data is sent unless you opt in.</p>
+    <p><a href="https://github.com/jtsilverman/fingerprint-lab">Source on GitHub</a></p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

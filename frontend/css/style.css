@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #58a6ff;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #8b949e;
+  font-size: 1.1rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Score Section */
+#score-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#score-gauge {
+  margin-bottom: 0.5rem;
+}
+
+.score-value {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-top: 0.25rem;
+}
+
+.score-low { color: #3fb950; }
+.score-medium { color: #d29922; }
+.score-high { color: #f85149; }
+
+#fingerprint-hash {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #8b949e;
+  word-break: break-all;
+  margin-top: 0.5rem;
+}
+
+/* Vector Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.vector-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.vector-card:hover {
+  border-color: #58a6ff;
+}
+
+.vector-card.expanded {
+  grid-column: 1 / -1;
+}
+
+.vector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.vector-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.vector-category {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cat-rendering { background: #1f3a5f; color: #58a6ff; }
+.cat-hardware { background: #3b2f1f; color: #d29922; }
+.cat-network { background: #2f1f3b; color: #bc8cff; }
+.cat-browser { background: #1f3b2f; color: #3fb950; }
+.cat-security { background: #3b1f1f; color: #f85149; }
+
+.vector-value {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #8b949e;
+  word-break: break-all;
+  margin-bottom: 0.5rem;
+}
+
+.vector-entropy {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.vector-entropy strong {
+  color: #e6edf3;
+}
+
+/* Expanded detail */
+.vector-detail {
+  display: none;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #30363d;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.vector-card.expanded .vector-detail {
+  display: block;
+}
+
+.detail-section {
+  margin-bottom: 0.75rem;
+}
+
+.detail-section h4 {
+  color: #58a6ff;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.detail-section p {
+  color: #8b949e;
+}
+
+.raw-value {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #e6edf3;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Loading */
+#loading {
+  text-align: center;
+  padding: 3rem;
+  color: #8b949e;
+  font-size: 1.1rem;
+}
+
+#loading.hidden {
+  display: none;
+}
+
+/* Buttons */
+.btn {
+  background: #238636;
+  color: #fff;
+  border: 1px solid #2ea043;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.btn:hover {
+  background: #2ea043;
+}
+
+.btn-secondary {
+  background: #21262d;
+  border-color: #30363d;
+}
+
+.btn-secondary:hover {
+  background: #30363d;
+}
+
+#actions {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #21262d;
+  color: #484f58;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body { padding: 1rem 0.5rem; }
+  h1 { font-size: 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}
